@@ -22,3 +22,6 @@ public/vendor
 .tern-port
 .DS_Store
 *.css
+
+# JetBrains IDE files
+.idea/
