@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         tasks: ['compass:dev'],
       },
       src: {
-        files: ['views/*.jade', '<%= jsDir %>/*.js', '!node_modules/**/*.js'],
+        files: ['views/*.jade', '<%= jsDir %>/**/*.js', '!node_modules/**/*.js'],
       },
       server: {
         files: ['**/*.js', '!<%= jsDir %>/**/*.js', '!node_modules/**/*.js'],
