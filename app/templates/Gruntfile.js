@@ -53,17 +53,17 @@ module.exports = function(grunt) {
     watch: {
       options: {
         livereload: true,
-        spawn: false //Without this option specified express won't be reloaded
+        spawn: false // Without this option specified, Express won't be reloaded
       },
       styles: {
-        files: ['public/**/*.sass', 'public/**/*.scss'],
-        tasks: ['compass:dev'],
+        files: ['<%= stylesDir %>/**/*.sass', '<%= stylesDir %>/**/*.scss'],
+        tasks: ['compass:dev']
       },
       src: {
-        files: ['views/*.jade', '<%= jsDir %>/**/*.js', '!node_modules/**/*.js'],
+        files: ['views/**/*.jade', 'Gruntfile.js', '<%= jsDir %>/**/*.js']
       },
       server: {
-        files: ['**/*.js', '!<%= jsDir %>/**/*.js', '!node_modules/**/*.js'],
+        files: ['app.js', 'routes/**/*.js'],
         tasks: ['express:dev']
       }
     },
@@ -108,6 +108,14 @@ module.exports = function(grunt) {
         files: {
           './': '<%= compass.prod.options.cssDir %>/**/*.css'
         }
+      }
+    },
+    bower: {
+      options: {
+        exclude: ['modernizr', 'requirejs']
+      },
+      target: {
+        rjsConfig: '<%= jsDir %>/common.js'
       }
     },
     requirejs: {
