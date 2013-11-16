@@ -15,9 +15,6 @@
     "public/javascripts/**/*.js",
     "tests/**/*.test.js"
   ],
-  "src_files_ignore": [
-    "public/javascripts/vendor/**/*.js"
-  ],
   "serve_files": [
     "tests/**/*.test.js"
   ]
