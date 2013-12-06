@@ -13,7 +13,10 @@
       assert = chai.assert;
       var should = chai.should();
       expect = chai.expect;
-      mocha.setup('bdd');
+      mocha.setup('bdd').globals(['lang','momentCode']);
+
+      window.lang = 'en-US';
+      window.momentCode = 'en';
     </script>
     <script src="/public/vendor/requirejs/require.js"></script>
 
@@ -37,8 +40,7 @@
       });
     </script>
 
-    <script src="/node_modules/blanket/dist/qunit/blanket.js" data-cover-only="//public\/javascripts\/.*/"  data-cover-never="//\public\/javascripts\/vendor\/.*/"></script>
-    <script src="/node_modules/blanket/src/adapters/mocha-blanket.js"></script>
+    <script src="/node_modules/blanket/dist/qunit/blanket.js" data-cover-adapter="/node_modules/blanket/src/adapters/mocha-blanket.js"></script>
 
 </body>
 </html>

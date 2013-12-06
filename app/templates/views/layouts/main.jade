@@ -1,0 +1,42 @@
+!!! 5
+//if lt IE 7
+  <html class='no-js ie6 oldie' id='ng-app' lang='#{lang}'>
+//if IE 7
+  <html class='no-js ie7 oldie' id='ng-app' lang='#{lang}'>
+//if IE 8
+  <html class='no-js ie8 oldie' id='ng-app' lang='#{lang}'>
+//[if gt IE 8]><!
+html.no-js(lang='#{lang}')
+  //<![endif]
+  head
+    block head
+      meta(charset='utf-8')
+      meta(name='lang', content='#{lang}')
+      meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes')
+      title= title
+
+      block head-styles
+          link(rel='stylesheet', href='#{staticPath}/stylesheets/main.css')
+
+      block head-scripts
+        script(src="/vendor/modernizr/modernizr.js")
+        script.
+          window.lang = '!{lang}';
+          window.basePath = '!{basePath}';
+          window.momentCode = '!{momentCode}';
+
+  body(class=pageClass ? pageClass : '')
+    block content
+
+
+    block footer-scripts
+      script.
+        require(['#{staticPath}/javascripts/common.js'], function(rConfig){
+          if('#{scriptPath}'){
+            require(['#{staticPath}/javascripts/#{scriptPath}.js']);
+          }
+        });
+
+      if 'local' === settings.env
+        script.
+           document.write('<script src="http://' + location.hostname + ':35729/livereload.js"><\x3C/script>')

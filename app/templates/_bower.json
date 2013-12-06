@@ -3,9 +3,18 @@
   "version": "0.0.0",
   "dependencies": {
     "jquery": "~1.10.2",
-    "lodash": "~1.3.1",
-    "requirejs": "~2.1.8",
-    "modernizr": "~2.6.2"
+    "lodash": "latest",
+    "requirejs": "latest",
+    "modernizr": "latest",
+    "html5-boilerplate": "latest",
+    "components-font-awesome": "latest",
+    "requirejs-text": "latest",
+    "fastclick": "latest",
+    "moment": "latest",
+    "underscore.string": "latest",
+    "selectivizr": "latest",
+    "nwmatcher": "latest",
+    "json3": "latest"
   }
 }
 
