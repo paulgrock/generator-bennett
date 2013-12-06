@@ -24,11 +24,8 @@ module.exports = function(grunt) {
         imagesDir: 'public/images',
         javascriptsDir: '<%= jsDir %>',
         noLineComments: true,
-        sassOptions: {
-          debugInfo: false,
-          sourcemap: true
-        },
-        relativeAssets: true
+        debugInfo: true,
+        force: true
       },
       dev: {
         outputStyle: 'nested'
@@ -53,17 +50,17 @@ module.exports = function(grunt) {
     watch: {
       options: {
         livereload: true,
-        spawn: false //Without this option specified express won't be reloaded
+        spawn: false // Without this option specified, Express won't be reloaded
       },
       styles: {
-        files: ['public/**/*.sass', 'public/**/*.scss'],
-        tasks: ['compass:dev'],
+        files: ['<%= stylesDir %>/**/*.sass', '<%= stylesDir %>/**/*.scss'],
+        tasks: ['compass:dev']
       },
       src: {
-        files: ['views/*.jade', '<%= jsDir %>/*.js', '!node_modules/**/*.js'],
+        files: ['views/**/*.jade', 'Gruntfile.js', '<%= jsDir %>/**/*.js']
       },
       server: {
-        files: ['**/*.js', '!<%= jsDir %>/**/*.js', '!node_modules/**/*.js'],
+        files: ['app.js', 'routes/**/*.js', 'static-json/**/*.json'],
         tasks: ['express:dev']
       }
     },

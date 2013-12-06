@@ -1,16 +1,20 @@
 require.config({
   baseUrl: '/javascripts',
   paths: {
-    'jquery': '../vendor/jquery/jquery',
-    'lodash': '../vendor/lodash/lodash'
+    jquery: '../vendor/jquery/jquery',
+    lodash: '../vendor/lodash/lodash',
+    text: '../vendor/requirejs-text/text',
+    fastclick: '../vendor/fastclick/lib/fastclick',
+    moment: '../vendor/moment/moment'
   }
 });
 
-//files to include on ALL client side paths
+// Files to include on ALL client side paths
 require([
   'jquery',
-  'lodash'
-], function ($, _) {
+  'lodash',
+  'fastclick'
+], function ($, _, FastClick) {
   'use strict';
   console.log(_.VERSION);
   console.log($.fn.jquery);

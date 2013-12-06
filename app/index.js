@@ -24,6 +24,8 @@ BennettGenerator.prototype.app = function app() {
   this.mkdir('routes');
   this.mkdir('tests');
   this.mkdir('views');
+  this.mkdir('views/home');
+  this.mkdir('views/layouts');
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
 };
@@ -37,8 +39,8 @@ BennettGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('jshintrc', '.jshintrc');
   this.copy('routes/index.js', 'routes/index.js');
-  this.copy('views/index.jade', 'views/index.jade');
-  this.copy('views/layout.jade', 'views/layout.jade');
+  this.copy('views/home/index.jade', 'views/index.jade');
+  this.copy('views/layouts/main.jade', 'views/layout.jade');
   this.copy('javascripts/common.js', 'public/javascripts/common.js');
   this.copy('tests/_index', 'tests/index.mustache');
 };
