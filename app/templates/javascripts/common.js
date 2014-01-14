@@ -2,7 +2,7 @@ require.config({
   baseUrl: '/javascripts',
   paths: {
     jquery: '../vendor/jquery/jquery',
-    lodash: '../vendor/lodash/lodash',
+    lodash: '../vendor/lodash/dist/lodash',
     text: '../vendor/requirejs-text/text',
     fastclick: '../vendor/fastclick/lib/fastclick',
     moment: '../vendor/moment/moment'
