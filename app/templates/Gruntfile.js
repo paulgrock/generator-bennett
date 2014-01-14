@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
   var path = require('path');
   require('time-grunt')(grunt);
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('load-grunt-tasks')(grunt);
   // Project configuration
   grunt.initConfig({
     akamai: function() {
