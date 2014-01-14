@@ -39,8 +39,10 @@ BennettGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('Gruntfile.js', 'Gruntfile.js');
   this.copy('jshintrc', '.jshintrc');
   this.copy('routes/index.js', 'routes/index.js');
-  this.copy('views/home/index.jade', 'views/index.jade');
-  this.copy('views/layouts/main.jade', 'views/layout.jade');
+  this.copy('views/home/index.jade', 'views/home/index.jade');
+  this.copy('views/layouts/main.jade', 'views/layouts/main.jade');
   this.copy('javascripts/common.js', 'public/javascripts/common.js');
+  this.copy('stylesheets/main.sass', 'public/stylesheets/main.sass');
+  this.copy('stylesheets/_vars.sass', 'public/stylesheets/_vars.sass');
   this.copy('tests/_index', 'tests/index.mustache');
 };
