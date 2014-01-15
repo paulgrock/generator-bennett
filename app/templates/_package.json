@@ -26,7 +26,7 @@
     "phantomjs": "*",
     "blanket": "*",
     "bower": "*",
-    "grunt-express-server": "*",
+    "grunt-express-server": "0.4.2",
     "grunt-contrib-compass": "*",
     "load-grunt-tasks": "*",
     "grunt-contrib-jshint": "*",
