@@ -13,7 +13,7 @@
     "lodash": "*",
     "forever": "*",
     "request": "*",
-    "q": "*"
+    "rsvp": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -40,7 +40,6 @@
     "grunt-contrib-copy": "*",
     "time-grunt": "*",
     "grunt-cssurlrev": "*",
-    "grunt-bower-requirejs": "*",
     "grunt-hashmap": "*"
   }
 }
